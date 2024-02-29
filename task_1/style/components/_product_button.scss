@@ -1,0 +1,29 @@
+.products__button {
+    @include flex-layout(row, center, center);
+    gap: 24px;
+    border: 1px #FF6A6A solid;
+    color: #F26376;
+    background: none;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 14px 40px;
+    margin-top: 48px;
+    transition: $fast-transition;
+}
+
+.products__button:hover {
+    color: $main-white-color;
+    background-color: $highlighting-color;
+}
+
+@media (max-width: $tablet-max-width) {
+    .products__button {
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: $phone-max-width) {
+    .products__button {
+        margin-top: 42px;
+    }
+}

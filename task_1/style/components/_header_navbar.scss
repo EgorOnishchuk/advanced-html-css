@@ -1,0 +1,111 @@
+.header__nav-bar {
+    @include flex-layout(row, center, center);
+    gap: 860px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: $main-dark-color;
+}
+
+.nav-bar__logo-block {
+    @include flex-layout(row, center, flex-end);
+    gap: 40px;
+}
+
+.nav-bar__buttons {
+    @include flex-layout(row, center, center);
+    gap: 32px;
+}
+
+.buttons__button_list {
+    position: relative;
+}
+
+.button__counter {
+    position: absolute;
+    left: 24px;
+    bottom: 18px;
+    padding: 1px 5px 4px 7px;
+    border-radius: $circle;
+    background-color: $highlighting-color;
+    font-weight: 400;
+    font-size: 12px;
+    color: $main-white-color;
+}
+
+.buttons__button_list:hover .button__list {
+    display: block;
+}
+
+.button__list {
+    @include hiding;
+    @include bottom-right-corner;
+    z-index: 1;
+    margin-top: 25px;
+    padding: 32px 72px 32px 32px;
+    background-color: $main-white-color;
+    box-shadow: 0 0 36px 0 rgba(0, 0, 0, 0.2);
+}
+
+.list__title {
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 24px;
+}
+
+.list__categories {
+    @include flex-layout(column, center, flex-start);
+    gap: 20px;
+}
+
+.categories__category {
+    @include flex-layout(column, center, flex-start);
+    gap: 12px;
+    white-space: nowrap;
+}
+
+.category__title {
+    font-weight: 400;
+    font-size: 14px;
+    color: $highlighting-color;
+}
+
+.category__subcategory {
+    font-weight: 400;
+    font-size: 14px;
+    color: #6F6E6E;
+    margin-left: 20px;
+}
+
+@media (max-width: $tablet-max-width) {
+    .header__nav-bar {
+        gap: 424px;
+    }
+
+    .nav-bar__buttons {
+        gap: 24px;
+    }
+
+    .buttons__button_list:hover .button__list {
+        display: none;
+    }
+}
+
+@media (max-width: $phone-max-width) {
+    .header__nav-bar {
+        gap: 200px;
+        flex-wrap: nowrap;
+    }
+
+    .nav-bar__logo-block {
+        flex-wrap: nowrap;
+    }
+
+    .buttons__button_profile {
+        display: none;
+    }
+
+    .buttons__button_list {
+        display: none;
+    }
+}

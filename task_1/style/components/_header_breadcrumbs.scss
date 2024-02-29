@@ -1,0 +1,37 @@
+.header__breadcrumbs {
+    @include flex-layout(row, space-between, center);
+    background-color: #f8f3f4;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.breadcrumbs__title {
+    color: $highlighting-color;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.breadcrumbs__list {
+    @include flex-layout(row, center, center);
+    list-style: none;
+}
+
+.list__item {
+    margin-right: 5px;
+}
+
+.list__item:not(:last-child):after {
+    margin-left: 3px;
+    content: '/';
+}
+
+.item__link {
+    font-weight: 300;
+    font-size: 14px;
+    color: #636363;
+}
+
+.item__link_selected {
+    font-weight: 700;
+    color: $highlighting-color;
+}

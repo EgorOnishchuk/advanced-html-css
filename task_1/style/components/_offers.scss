@@ -1,0 +1,89 @@
+.main-content__offers {
+    @include grid-layout(repeat(3, 360px), center, center);
+    gap: 32px;
+    margin-top: 64px;
+}
+
+.offers__offer {
+    @include background-image-layout(contain);
+    text-align: center;
+}
+
+.offers__offer_women,
+.offers__offer_men,
+.offers__offer_kids {
+    padding-top: 104px;
+    padding-bottom: 104px;
+}
+
+.offers__offer_women {
+    @include background-image-overlay($light-overlay-color, '../../images/offers_woman.jpg');
+}
+
+.offers__offer_men {
+    @include background-image-overlay($light-overlay-color, '../../images/offers_man.jpg');
+}
+
+.offers__offer_kids {
+    @include background-image-overlay($light-overlay-color, '../../images/offers_kid.jpg');
+}
+
+.offers__offer_accessories {
+    @include background-image-overlay($light-overlay-color, '../../images/offers_accessories.jpg');
+    grid-column: span 3;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.text__characteristic {
+    color: $main-white-color;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.text__category {
+    color: $highlighting-color;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+@media (max-width: $tablet-max-width) {
+    .main-content__offers {
+        @include grid-layout(repeat(3, 232px), center, center);
+        gap: 20px;
+    }
+
+    .offers__offer_women,
+    .offers__offer_men,
+    .offers__offer_kids {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .offers__offer_accessories {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
+
+@media (max-width: $phone-max-width) {
+    .main-content__offers {
+        @include grid-layout(344px, center, center);
+        gap: 32px;
+    }
+
+    .offers__offer_women,
+    .offers__offer_men,
+    .offers__offer_kids {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .offers__offer_accessories {
+        grid-column: span 1;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        @include background-image-layout(cover);
+        background-position: center;
+    }
+}

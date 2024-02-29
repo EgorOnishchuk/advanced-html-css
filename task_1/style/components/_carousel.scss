@@ -1,0 +1,30 @@
+.main-content__carousel {
+    position: relative;
+    @include flex-layout(row, center, center);
+    background-color: #F7F7F7;
+}
+
+.carousel__button {
+    position: absolute;
+    @include flex-layout(row, center, center);
+    padding: 12px 18px;
+    background-color: rgba(42, 42, 42, 0.15);
+}
+
+.carousel__button:hover .button__icon {
+    fill: $highlighting-color;
+    transition: $fast-transition;
+}
+
+.carousel__button_left {
+    left: 0;
+}
+
+.carousel__image {
+    padding-top: 12px;
+    padding-bottom: 44px;
+}
+
+.carousel__button_right {
+    right: 0;
+}

@@ -1,0 +1,46 @@
+@mixin content-area-centering($width, $indentations) {
+    padding-right: calc(50% - ($width - $indentations * 2) / 2);
+    padding-left: calc(50% - ($width - $indentations * 2) / 2);
+}
+
+@mixin flex-layout($direction, $horizontal, $vertical) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $horizontal;
+    align-items: $vertical;
+    flex-wrap: wrap;
+}
+
+@mixin grid-layout($columns-template, $horizontal, $vertical) {
+    display: grid;
+    grid-template-columns: $columns-template;
+    justify-content: $horizontal;
+    align-items: $vertical;
+    flex-wrap: wrap;
+}
+
+@mixin hiding {
+    display: none;
+    position: absolute;
+}
+
+@mixin bottom-right-corner {
+    top: 100%;
+    left: 100%;
+}
+
+@mixin overlaying {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin background-image-layout($scaling) {
+    background-repeat: no-repeat;
+    background-size: $scaling;
+}
+
+@mixin background-image-overlay($overlay, $path) {
+    background-image: linear-gradient($overlay, $overlay), url($path);
+}

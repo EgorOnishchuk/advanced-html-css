@@ -1,0 +1,156 @@
+.footer__subscription {
+    @include flex-layout(row, center, center);
+    gap: 400px;
+    @include background-image-layout(cover);
+    background-image: url(../../images/beach.jpg);
+    padding-top: 96px;
+    padding-bottom: 128px;
+    @include content-area-centering($desktop-extended-width, $desktop-indentations);
+}
+
+.comment__image {
+    margin-left: 132px;
+    margin-right: 132px;
+}
+
+.comment__text {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: $main-dark-color;
+    max-width: 360px;
+    margin-top: 32px;
+}
+
+.form__title {
+    font-weight: 700;
+    font-size: 24px;
+    color: $main-dark-color;
+    text-align: center;
+    margin-bottom: 32px;
+    max-width: 556px;
+}
+
+.title__main-part {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 168%;
+    color: $main-dark-color;
+}
+
+.title__secondary-part {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.form__main-part {
+    @include flex-layout(row, center, center);
+}
+
+.main-part__input {
+    @include flex-layout(row, flex-start, center);
+    background: #e1e1e1;
+    border: none;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    width: 232px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+}
+
+.main-part__input::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    color: $main-dark-color;
+    opacity: 0.67;
+}
+
+.main-part__button {
+    background-color: $highlighting-color;
+    font-weight: 400;
+    font-size: 14px;
+    color: $main-white-color;
+    border: none;
+    width: 100px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transition: $fast-transition;
+}
+
+.main-part__button:hover {
+    background: #E05C6E;
+}
+
+.footer__information {
+    @include flex-layout(row, center, center);
+    gap: 746px;
+    background: $main-dark-color;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.information__copyright {
+    font-weight: 400;
+    font-size: 16px;
+    color: #fbfbfb;
+}
+
+.information__social-media-icons {
+    @include flex-layout(row, center, center);
+    gap: 8px;
+}
+
+.image__background,
+.image__logo {
+    transition: $fast-transition;
+}
+
+.social-media-icons__icon:hover .image__background {
+    fill: $highlighting-color;
+}
+
+.social-media-icons__icon:hover .image__logo {
+    fill: $main-white-color;
+}
+
+@media (max-width: $tablet-max-width) {
+    .footer__subscription {
+        @include flex-layout(column, center, center);
+        gap: 48px;
+        padding-top: 64px;
+        padding-bottom: 140px;
+        background-image: url(../../images/tablet_beach.jpg);
+    }
+
+    .form__title {
+        margin-bottom: 28px;
+    }
+
+    .footer__information {
+        gap: 305px;
+    }
+}
+
+@media (max-width: $phone-max-width) {
+    .footer__subscription {
+        padding-bottom: 112px;
+        gap: 60px;
+        background-image: url(../../images/phone_beach.jpg);
+    }
+
+    .footer__information {
+        @include flex-layout(column-reverse, center, center);
+        gap: 40px;
+        padding-top: 44px;
+        padding-bottom: 8px;
+    }
+
+    .information__copyright {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

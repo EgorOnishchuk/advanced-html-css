@@ -1,0 +1,131 @@
+.footer__subscription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 223px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(images/beach.jpg);
+  padding-top: 97px;
+  padding-bottom: 126px;
+  padding-left: calc(50% - 800px);
+  padding-right: calc(50% - 800px);
+}
+
+.comment__image {
+  margin-left: 122px;
+  margin-right: 142px;
+}
+
+.comment__text {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: #222224;
+  max-width: 359px;
+  margin-top: 30px;
+}
+
+.subscription__form {
+  margin-top: 53px;
+  margin-bottom: 30px;
+  margin-left: 104px;
+  margin-right: 97px;
+}
+
+.form__title {
+  font-weight: 700;
+  font-size: 24px;
+  color: #222224;
+  text-align: center;
+  margin-bottom: 32px;
+  max-width: 557px;
+}
+
+.title__main-part {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 167%;
+  color: #222224;
+}
+
+.title__secondary-part {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.main-part__input {
+  background: #e1e1e1;
+  border: none;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding: 7px 64px 6px 22px;
+}
+
+.main-part__input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #222224;
+  opacity: 0.67;
+}
+
+.main-part__input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #222224;
+  opacity: 0.67;
+}
+
+.main-part__button {
+  background: #f16d7f;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  padding: 7px 7px 6px 8px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.main-part__button:hover {
+  background: #E05C6E;
+}
+
+.footer__information {
+  display: flex;
+  justify-content: space-around;
+  gap: 655px;
+  background: #222224;
+  padding-top: 24px;
+  padding-bottom: 23px;
+}
+
+.information__copyright {
+  font-weight: 400;
+  font-size: 16px;
+  color: #fbfbfb;
+  margin-top: 6px;
+  margin-bottom: 7px;
+}
+
+.information__social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+.image__background,
+.image__logo {
+  transition: 0.3s;
+}
+
+.social-media-icons__icon:hover .image__background {
+  fill: #F16D7F;
+}
+
+.social-media-icons__icon:hover .image__logo {
+  fill: white;
+}/*# sourceMappingURL=footer.css.map */
