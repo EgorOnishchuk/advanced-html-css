@@ -47,6 +47,11 @@
     font-size: 13px;
     font-weight: 400;
     margin-top: 24px;
+    transition: $fast-transition;
+}
+
+.text__title:hover {
+    color: $highlighting-color;
 }
 
 .text__description {

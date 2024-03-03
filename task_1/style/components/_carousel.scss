@@ -1,6 +1,7 @@
 .main-content__carousel {
     position: relative;
     @include flex-layout(row, center, center);
+    border: 1px #EAEAEA solid;
     background-color: #F7F7F7;
 }
 
@@ -9,6 +10,7 @@
     @include flex-layout(row, center, center);
     padding: 12px 18px;
     background-color: rgba(42, 42, 42, 0.15);
+    cursor: pointer;
 }
 
 .carousel__button:hover .button__icon {

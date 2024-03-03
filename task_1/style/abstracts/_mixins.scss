@@ -24,11 +24,6 @@
     position: absolute;
 }
 
-@mixin bottom-right-corner {
-    top: 100%;
-    left: 100%;
-}
-
 @mixin overlaying {
     top: 0;
     left: 0;

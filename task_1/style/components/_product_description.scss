@@ -53,24 +53,34 @@
     border: 1px $main-grey-color solid;
 }
 
-.description__dropdowns {
+.description__selections {
     @include flex-layout(row, center, center);
     gap: 24px;
     margin-top: 64px;
 }
 
-.dropdowns__dropdown {
+.selection__title {
     @include flex-layout(row, center, center);
     gap: 8px;
+    cursor: pointer;
+    transition: $fast-transition;
 }
 
-.dropdown__icon {
-    padding-top: 7px;
-    padding-bottom: 5px;
+.selection__title:hover .title__text_selection {
+    color: $highlighting-color;
 }
 
-.dropdown__text {
+.selection__title:hover .title__icon_selection path {
+    fill: $highlighting-color;
+}
+
+.title__text_selection {
     font-weight: 400;
     font-size: 14px;
     color: #6f6e6e;
+}
+
+.title__icon_selection path {
+    padding-top: 7px;
+    padding-bottom: 5px;
 }

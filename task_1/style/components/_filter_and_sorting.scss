@@ -1,0 +1,216 @@
+.main-content__filter-and-sorting {
+    @include flex-layout(row, flex-start, center);
+    gap: 32px;
+    padding-top: 40px;
+    padding-bottom: 52px;
+}
+
+.filter-and-sorting__filters-box {
+    width: 360px;
+    height: 40px;
+    position: relative;
+}
+
+.filters-box__filters {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 16px 16px 0px;
+    z-index: 1;
+    transition: $fast-transition;
+    cursor: pointer;
+}
+
+.filters-box__filters[open] {
+    padding-left: 16px;
+    background-color: $main-white-color;
+    box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21);
+}
+
+.filters-box__filters[open] .title__text_filter {
+    color: $highlighting-color;
+}
+
+.filters-box__filters[open] .title__icon path {
+    fill: $highlighting-color;
+}
+
+.filters__title {
+    @include flex-layout(row, flex-start, center);
+    gap: 12px;
+}
+
+.title__text_filter {
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+}
+
+.filters__title:hover .title__text_filter {
+    color: $highlighting-color;
+}
+
+.filters__title:hover .title__icon path {
+    fill: $highlighting-color;
+}
+
+.title__text_filter,
+.title__icon path {
+    transition: $fast-transition;
+}
+
+.filters__content {
+    @include flex-layout(column, flex-start, normal);
+    gap: 18px;
+    z-index: 1;
+    margin-top: 16px;
+}
+
+.content__filter {
+    transition: $fast-transition;
+}
+
+.content__filter[open] .filter__title {
+    color: $highlighting-color;
+}
+
+.filter__title {
+    font-weight: 400;
+    font-size: 14px;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    border-bottom: 1px #EBEBEB solid;
+    border-left: 5px $highlighting-color solid;
+    color: #6f6e6e;
+    transition: $fast-transition;
+}
+
+.filter__title:hover {
+    color: $highlighting-color;
+}
+
+.filter__list {
+    @include flex-layout(column, flex-start, flex-start);
+    gap: 12px;
+    list-style: none;
+    margin-top: 24px;
+    margin-bottom: 6px;
+    margin-left: 16px;
+}
+
+.item__link_filter {
+    font-weight: 400;
+    font-size: 14px;
+    color: #6f6e6e;
+    transition: $fast-transition;
+}
+
+.item__link_filter:hover {
+    color: $highlighting-color;
+}
+
+.filter-and-sorting__sorting-block {
+    @include flex-layout(row, center, center);
+    gap: 28px;
+}
+
+.sorting-block__sorting {
+    position: relative;
+    cursor: pointer;
+}
+
+.sorting-block__sorting[open] .sorting__list {
+    box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21);
+}
+
+.sorting__title {
+    @include flex-layout(row, center, center);
+    gap: 12px;
+}
+
+.title__text_sorting {
+    font-weight: 400;
+    font-size: 14px;
+    color: #6f6e6e;
+}
+
+.sorting__title:hover .title__text_sorting {
+    color: $highlighting-color;
+}
+
+.sorting__title:hover .title__icon path {
+    fill: $highlighting-color;
+}
+
+.title__text_sorting,
+.title__icon path {
+    transition: $fast-transition;
+}
+
+.sorting__list {
+    position: absolute;
+    top: 20px;
+    left: -9px;
+    width: 80px;
+    @include flex-layout(column, center, flex-start);
+    gap: 24px;
+    padding-top: 8px;
+    padding-bottom: 28px;
+    padding-left: 8px;
+    z-index: 1;
+    background-color: $main-white-color;
+}
+
+.list__item_sorting {
+    position: relative;
+}
+
+.item__checkbox {
+    display: block;
+    position: absolute;
+}
+
+.item__text_sorting {
+    position: absolute;
+    padding-left: 24px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #6f6e6e;
+    cursor: pointer;
+    transition: $fast-transition;
+}
+
+.item__text_sorting:hover {
+    color: $highlighting-color;
+}
+
+.item__text_sorting::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    z-index: 1;
+    border: 1px #EBEBEB solid;
+}
+
+.item__text_sorting::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 13px - 1px;
+    height: 13px - 1px;
+    top: 1px;
+    left: 2px;
+    z-index: 2;
+    background: url(../../images/checkbox_icon.svg) no-repeat;
+    background-size: 12px 12px;
+    opacity: 0;
+}
+
+.item__checkbox:checked+.item__text_sorting::after {
+    opacity: 1;
+}

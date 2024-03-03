@@ -13,7 +13,6 @@
 
 .breadcrumbs__list {
     @include flex-layout(row, center, center);
-    list-style: none;
 }
 
 .list__item {
@@ -29,6 +28,11 @@
     font-weight: 300;
     font-size: 14px;
     color: #636363;
+    transition: $fast-transition;
+}
+
+.item__link:hover {
+    color: $highlighting-color;
 }
 
 .item__link_selected {

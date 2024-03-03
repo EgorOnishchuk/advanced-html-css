@@ -1,0 +1,39 @@
+.products__pagination {
+    @include flex-layout(row, center, center);
+    gap: 16px;
+    margin-top: 48px;
+    margin-bottom: 96px;
+    border: 1px #EBEBEB solid;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+.pagination__button {
+    margin-top: 2px;
+}
+
+.pagination__button:hover .button__icon_pagination path {
+    fill: $highlighting-color;
+}
+
+.button__icon_pagination path {
+    transition: $fast-transition;
+}
+
+.pages__page,
+.ellipsis-block__page,
+.ellipsis-block__ellipsis {
+    font-weight: 300;
+    font-size: 16px;
+    color: #c4c4c4;
+    transition: $fast-transition;
+}
+
+.pages__page:hover,
+.ellipsis-block__page:hover {
+    color: $highlighting-color;
+}
+
+.pages__page_selected {
+    color: $highlighting-color;
+}

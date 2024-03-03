@@ -1,7 +1,20 @@
 .main-content__products {
     @include flex-layout(column, center, center);
+}
+
+.main-content__products_index {
     margin-top: 96px;
     margin-bottom: 96px;
+}
+
+.main-content__products_product {
+    margin-top: 128px;
+    margin-bottom: 128px;
+}
+
+.main-content__products_catalog {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .products__title {
@@ -15,12 +28,12 @@
     font-size: 14px;
     font-weight: 400;
     margin-top: 8px;
+    margin-bottom: 48px;
 }
 
 .products__cards {
     @include grid-layout(repeat(3, 360px), center, center);
     gap: 32px;
-    margin-top: 48px;
 }
 
 @media (max-width: $tablet-max-width) {
