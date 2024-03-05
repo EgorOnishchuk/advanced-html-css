@@ -19,7 +19,7 @@
     margin-right: 5px;
 }
 
-.list__item:not(:last-child):after {
+.list__item:not(:last-child)::after {
     margin-left: 3px;
     content: '/';
 }

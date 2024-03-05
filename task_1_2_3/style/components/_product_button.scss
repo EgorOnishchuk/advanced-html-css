@@ -2,13 +2,20 @@
     @include flex-layout(row, center, center);
     gap: 24px;
     border: 1px #FF6A6A solid;
-    color: #F26376;
+    color: $highlighting-color;
     background: none;
     font-size: 16px;
     font-weight: 400;
     padding: 14px 40px;
     margin-top: 48px;
+    cursor: pointer;
     transition: $fast-transition;
+}
+
+.products__button_cart {
+    margin: 6px 0 0 6px;
+    border: 1px #E2E2E2 solid;
+    background-color: $main-white-color;
 }
 
 .products__button:hover {
