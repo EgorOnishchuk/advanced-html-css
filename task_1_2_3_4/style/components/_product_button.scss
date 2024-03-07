@@ -6,21 +6,38 @@
     background: none;
     font-size: 16px;
     font-weight: 400;
-    padding: 14px 40px;
-    margin-top: 48px;
     cursor: pointer;
     transition: $fast-transition;
 }
 
+.products__button_index {
+    margin-top: 48px;
+    padding: 14px 40px;
+}
+
 .products__button_cart {
     margin: 6px 0 0 6px;
+    padding: 14px 40px;
     border: 1px #E2E2E2 solid;
     background-color: $main-white-color;
+}
+
+.products__button_registration {
+    margin-top: 8px;
+    padding: 16px 28px;
+}
+
+.products__button_registration .form__button-icon path {
+    fill: $highlighting-color;
 }
 
 .products__button:hover {
     color: $main-white-color;
     background-color: $highlighting-color;
+}
+
+.products__button_registration:hover .form__button-icon path {
+    fill: $main-white-color;
 }
 
 @media (max-width: $tablet-max-width) {

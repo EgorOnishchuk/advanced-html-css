@@ -16,9 +16,29 @@
     gap: 32px;
 }
 
+.logo-block__button:hover .button__icon path {
+    fill: $highlighting-color;
+}
+
+.buttons__button:hover .button__icon path {
+    fill: $highlighting-color;
+}
+
+.button__icon path {
+    transition: $fast-transition;
+}
+
 .buttons__button_hamburger-menu {
     position: relative;
     cursor: pointer;
+}
+
+.image__icon path {
+    transition: $fast-transition;
+}
+
+.buttons__button_hamburger-menu:hover .button__image .image__icon path {
+    fill: $highlighting-color;
 }
 
 .buttons__button_list {

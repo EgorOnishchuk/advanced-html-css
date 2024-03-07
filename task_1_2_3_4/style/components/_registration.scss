@@ -1,0 +1,120 @@
+.registration {
+    @include flex-layout(row, space-between, flex-start);
+    padding-top: 64px;
+    padding-bottom: 96px;
+}
+
+.registration__form {
+    @include flex-layout(column, center, flex-start);
+    gap: 32px;
+}
+
+.form__fields {
+    @include flex-layout(column, normal, normal);
+    gap: 20px;
+}
+
+.form__fields_radiobuttons {
+    @include flex-layout(row, normal, normal);
+}
+
+.form__title_registration {
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 16px;
+    color: $main-dark-color;
+}
+
+.form__input {
+    width: 360px;
+    padding: 14px 0 16px 14px;
+    border: 1px #A4A4A4 solid;
+    font-weight: 400;
+    font-size: 13px;
+    color: $main-dark-color;
+}
+
+.form__input::placeholder {
+    font-weight: 300;
+    font-size: 13px;
+    color: #b1b1b1;
+}
+
+.form__radiobutton {
+    display: block;
+    position: absolute;
+}
+
+.form__radiobutton-label {
+    position: relative;
+    padding: 2px 0 0 28px;
+    font-weight: 400;
+    font-size: 11px;
+    cursor: pointer;
+    transition: $fast-transition;
+}
+
+.form__radiobutton-label:hover {
+    color: $highlighting-color;
+}
+
+.form__radiobutton-label::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    z-index: 1;
+    border: 1px #a4a4a4 solid;
+    border-radius: 100%;
+}
+
+.form__radiobutton-label::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2.5px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    z-index: 2;
+    opacity: 0;
+    background-color: $highlighting-color;
+    border-radius: 100%;
+}
+
+.form__radiobutton:checked+.form__radiobutton-label::after {
+    opacity: 1;
+}
+
+.form__description {
+    width: 360px;
+    margin-top: -4px;
+    font-weight: 400;
+    font-size: 13px;
+    color: #b1b1b1;
+}
+
+.registration__description {
+    @include flex-layout(column, center, flex-start);
+    gap: 22px;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000;
+}
+
+.registration__introduction {
+    width: 652px;
+}
+
+.registration__perks {
+    @include flex-layout(column, center, flex-start);
+    gap: 16px;
+}
+
+.registration__perk {
+    @include flex-layout(row, flex-start, center);
+    gap: 22px;
+}

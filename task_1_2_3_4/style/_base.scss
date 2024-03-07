@@ -22,7 +22,8 @@ input {
     outline: none;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="radio"] {
     display: none;
 }
 
@@ -33,6 +34,10 @@ input[type="number"] {
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     appearance: none;
+}
+
+fieldset {
+    border: none;
 }
 
 summary {
