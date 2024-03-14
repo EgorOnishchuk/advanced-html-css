@@ -32,12 +32,13 @@
 }
 
 .products__cards {
-    @include grid-layout(repeat(3, 360px), center, center);
-    gap: 32px;
+    @include grid-layout(repeat(auto-fit, minmax(360px, 1fr)), center, center);
+    gap: 30px;
+    max-width: $desktop-width;
 }
 
 @media (max-width: $tablet-max-width) {
-    .main-content__products {
+    .main-content__products_index {
         margin-top: 108px;
         margin-bottom: 64px;
     }
@@ -47,20 +48,18 @@
     }
 
     .products__cards {
-        @include grid-layout(repeat(2, 360px), center, center);
         gap: 16px;
-        margin-top: 72px;
+        max-width: $tablet-max-width;
+    }
+
+    .products__description {
+        margin-bottom: 72px;
     }
 }
 
-@media (max-width: $tablet-max-width) {
-    .main-content__products {
+@media (max-width: $phone-max-width) {
+    .main-content__products_index {
         margin-top: 64px;
         margin-bottom: 96px;
-    }
-
-    .products__cards {
-        @include grid-layout(360px, center, center);
-        margin-top: 64px;
     }
 }

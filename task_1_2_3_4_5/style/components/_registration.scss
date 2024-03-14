@@ -100,7 +100,7 @@
 .registration__description {
     @include flex-layout(column, center, flex-start);
     gap: 22px;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 24px;
     color: #000;
 }
@@ -117,4 +117,24 @@
 .registration__perk {
     @include flex-layout(row, flex-start, center);
     gap: 22px;
+}
+
+@media (width <=$tablet-max-width) and (width >=$tablet-min-width) {
+    .form__title_registration {
+        font-weight: 400;
+    }
+
+    .registration__description {
+        width: 354px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .registration__introduction {
+        width: 354px;
+    }
+
+    .registration__perk-description {
+        width: 308px;
+    }
 }

@@ -68,10 +68,9 @@ summary::-webkit-details-marker {
 .header__nav-bar {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 860px;
   padding-top: 20px;
   padding-bottom: 20px;
   background: #222;
@@ -193,13 +192,11 @@ summary::-webkit-details-marker {
 
 @media (max-width: 1024px) {
   .header__nav-bar {
-    gap: 424px;
+    padding-right: 32px;
+    padding-left: 32px;
   }
   .nav-bar__buttons {
     gap: 24px;
-  }
-  .button__list {
-    display: none;
   }
 }
 @media (max-width: 767px) {
@@ -453,15 +450,16 @@ summary::-webkit-details-marker {
 
 .products__cards {
   display: grid;
-  grid-template-columns: repeat(3, 360px);
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 30px;
+  max-width: 1140px;
 }
 
 @media (max-width: 1024px) {
-  .main-content__products {
+  .main-content__products_index {
     margin-top: 108px;
     margin-bottom: 64px;
   }
@@ -469,27 +467,17 @@ summary::-webkit-details-marker {
     margin-top: 4px;
   }
   .products__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 360px);
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     gap: 16px;
-    margin-top: 72px;
+    max-width: 1024px;
+  }
+  .products__description {
+    margin-bottom: 72px;
   }
 }
-@media (max-width: 1024px) {
-  .main-content__products {
+@media (max-width: 767px) {
+  .main-content__products_index {
     margin-top: 64px;
     margin-bottom: 96px;
-  }
-  .products__cards {
-    display: grid;
-    grid-template-columns: 360px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 64px;
   }
 }
 .cards__product {
@@ -610,6 +598,11 @@ summary::-webkit-details-marker {
   padding: 14px 40px;
 }
 
+.products__button_product {
+  margin-top: 48px;
+  padding: 14px 40px;
+}
+
 .products__button_cart {
   margin: 6px 0 0 6px;
   padding: 14px 40px;
@@ -636,12 +629,12 @@ summary::-webkit-details-marker {
 }
 
 @media (max-width: 1024px) {
-  .products__button {
+  .products__button_index {
     margin-top: 32px;
   }
 }
 @media (max-width: 767px) {
-  .products__button {
+  .products__button_index {
     margin-top: 42px;
   }
 }
@@ -651,7 +644,7 @@ summary::-webkit-details-marker {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 30px;
   padding-top: 104px;
   padding-bottom: 104px;
   background: #222;
@@ -727,22 +720,19 @@ summary::-webkit-details-marker {
 .footer__subscription {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 400px;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../../images/beach.jpg);
   padding-top: 96px;
   padding-bottom: 128px;
-  padding-right: calc(50% - 800px);
-  padding-left: calc(50% - 800px);
 }
 
 .comment__image {
-  margin-left: 132px;
-  margin-right: 132px;
+  display: flex;
+  margin: auto;
 }
 
 .comment__text {
@@ -835,10 +825,9 @@ summary::-webkit-details-marker {
 .footer__information {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 746px;
   background: #222;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -888,7 +877,8 @@ summary::-webkit-details-marker {
     margin-bottom: 28px;
   }
   .footer__information {
-    gap: 305px;
+    padding-right: 32px;
+    padding-left: 32px;
   }
 }
 @media (max-width: 767px) {
@@ -983,10 +973,9 @@ summary::-webkit-details-marker {
 .header__nav-bar {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 860px;
   padding-top: 20px;
   padding-bottom: 20px;
   background: #222;
@@ -1108,13 +1097,11 @@ summary::-webkit-details-marker {
 
 @media (max-width: 1024px) {
   .header__nav-bar {
-    gap: 424px;
+    padding-right: 32px;
+    padding-left: 32px;
   }
   .nav-bar__buttons {
     gap: 24px;
-  }
-  .button__list {
-    display: none;
   }
 }
 @media (max-width: 767px) {
@@ -1427,6 +1414,13 @@ summary::-webkit-details-marker {
   opacity: 1;
 }
 
+@media (width <= 1024px) and (width >= 768px) {
+  .main-content__filter-and-sorting {
+    justify-content: center;
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+}
 .main-content__products {
   display: flex;
   flex-direction: column;
@@ -1466,15 +1460,16 @@ summary::-webkit-details-marker {
 
 .products__cards {
   display: grid;
-  grid-template-columns: repeat(3, 360px);
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 30px;
+  max-width: 1140px;
 }
 
 @media (max-width: 1024px) {
-  .main-content__products {
+  .main-content__products_index {
     margin-top: 108px;
     margin-bottom: 64px;
   }
@@ -1482,27 +1477,17 @@ summary::-webkit-details-marker {
     margin-top: 4px;
   }
   .products__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 360px);
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     gap: 16px;
-    margin-top: 72px;
+    max-width: 1024px;
+  }
+  .products__description {
+    margin-bottom: 72px;
   }
 }
-@media (max-width: 1024px) {
-  .main-content__products {
+@media (max-width: 767px) {
+  .main-content__products_index {
     margin-top: 64px;
     margin-bottom: 96px;
-  }
-  .products__cards {
-    display: grid;
-    grid-template-columns: 360px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 64px;
   }
 }
 .cards__product {
@@ -1646,13 +1631,19 @@ summary::-webkit-details-marker {
   color: #F16D7F;
 }
 
+@media (width <= 1024px) and (width >= 768px) {
+  .products__pagination {
+    margin-top: 40px;
+    margin-bottom: 64px;
+  }
+}
 .main-content__features {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 30px;
   padding-top: 104px;
   padding-bottom: 104px;
   background: #222;
@@ -1728,22 +1719,19 @@ summary::-webkit-details-marker {
 .footer__subscription {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 400px;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../../images/beach.jpg);
   padding-top: 96px;
   padding-bottom: 128px;
-  padding-right: calc(50% - 800px);
-  padding-left: calc(50% - 800px);
 }
 
 .comment__image {
-  margin-left: 132px;
-  margin-right: 132px;
+  display: flex;
+  margin: auto;
 }
 
 .comment__text {
@@ -1836,10 +1824,9 @@ summary::-webkit-details-marker {
 .footer__information {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 746px;
   background: #222;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -1889,7 +1876,8 @@ summary::-webkit-details-marker {
     margin-bottom: 28px;
   }
   .footer__information {
-    gap: 305px;
+    padding-right: 32px;
+    padding-left: 32px;
   }
 }
 @media (max-width: 767px) {
@@ -1984,10 +1972,9 @@ summary::-webkit-details-marker {
 .header__nav-bar {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 860px;
   padding-top: 20px;
   padding-bottom: 20px;
   background: #222;
@@ -2109,13 +2096,11 @@ summary::-webkit-details-marker {
 
 @media (max-width: 1024px) {
   .header__nav-bar {
-    gap: 424px;
+    padding-right: 32px;
+    padding-left: 32px;
   }
   .nav-bar__buttons {
     gap: 24px;
-  }
-  .button__list {
-    display: none;
   }
 }
 @media (max-width: 767px) {
@@ -2224,6 +2209,13 @@ summary::-webkit-details-marker {
   right: 0;
 }
 
+@media (width <= 1024px) and (width >= 768px) {
+  .carousel__image {
+    width: 466px;
+    height: 564px;
+    padding: 30px 0;
+  }
+}
 .main-content__description {
   position: relative;
   display: flex;
@@ -2260,7 +2252,7 @@ summary::-webkit-details-marker {
 }
 
 .description__text {
-  max-width: 552px;
+  max-width: 555px;
   margin-top: 48px;
   margin-bottom: 32px;
   font-weight: 300;
@@ -2323,6 +2315,17 @@ summary::-webkit-details-marker {
   padding-bottom: 5px;
 }
 
+@media (width <= 1024px) and (width >= 768px) {
+  .main-content__description {
+    margin-top: 0;
+  }
+  .description__subtitle,
+  .description__title,
+  .description__text,
+  .description__price {
+    font-weight: 400;
+  }
+}
 .main-content__products {
   display: flex;
   flex-direction: column;
@@ -2362,15 +2365,16 @@ summary::-webkit-details-marker {
 
 .products__cards {
   display: grid;
-  grid-template-columns: repeat(3, 360px);
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 30px;
+  max-width: 1140px;
 }
 
 @media (max-width: 1024px) {
-  .main-content__products {
+  .main-content__products_index {
     margin-top: 108px;
     margin-bottom: 64px;
   }
@@ -2378,27 +2382,17 @@ summary::-webkit-details-marker {
     margin-top: 4px;
   }
   .products__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 360px);
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     gap: 16px;
-    margin-top: 72px;
+    max-width: 1024px;
+  }
+  .products__description {
+    margin-bottom: 72px;
   }
 }
-@media (max-width: 1024px) {
-  .main-content__products {
+@media (max-width: 767px) {
+  .main-content__products_index {
     margin-top: 64px;
     margin-bottom: 96px;
-  }
-  .products__cards {
-    display: grid;
-    grid-template-columns: 360px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 64px;
   }
 }
 .cards__product {
@@ -2519,6 +2513,11 @@ summary::-webkit-details-marker {
   padding: 14px 40px;
 }
 
+.products__button_product {
+  margin-top: 48px;
+  padding: 14px 40px;
+}
+
 .products__button_cart {
   margin: 6px 0 0 6px;
   padding: 14px 40px;
@@ -2545,34 +2544,31 @@ summary::-webkit-details-marker {
 }
 
 @media (max-width: 1024px) {
-  .products__button {
+  .products__button_index {
     margin-top: 32px;
   }
 }
 @media (max-width: 767px) {
-  .products__button {
+  .products__button_index {
     margin-top: 42px;
   }
 }
 .footer__subscription {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 400px;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../../images/beach.jpg);
   padding-top: 96px;
   padding-bottom: 128px;
-  padding-right: calc(50% - 800px);
-  padding-left: calc(50% - 800px);
 }
 
 .comment__image {
-  margin-left: 132px;
-  margin-right: 132px;
+  display: flex;
+  margin: auto;
 }
 
 .comment__text {
@@ -2665,10 +2661,9 @@ summary::-webkit-details-marker {
 .footer__information {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 746px;
   background: #222;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -2718,7 +2713,8 @@ summary::-webkit-details-marker {
     margin-bottom: 28px;
   }
   .footer__information {
-    gap: 305px;
+    padding-right: 32px;
+    padding-left: 32px;
   }
 }
 @media (max-width: 767px) {
@@ -2746,10 +2742,9 @@ summary::-webkit-details-marker {
 .header__nav-bar {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 860px;
   padding-top: 20px;
   padding-bottom: 20px;
   background: #222;
@@ -2871,13 +2866,11 @@ summary::-webkit-details-marker {
 
 @media (max-width: 1024px) {
   .header__nav-bar {
-    gap: 424px;
+    padding-right: 32px;
+    padding-left: 32px;
   }
   .nav-bar__buttons {
     gap: 24px;
-  }
-  .button__list {
-    display: none;
   }
 }
 @media (max-width: 767px) {
@@ -2966,6 +2959,11 @@ summary::-webkit-details-marker {
   padding: 14px 40px;
 }
 
+.products__button_product {
+  margin-top: 48px;
+  padding: 14px 40px;
+}
+
 .products__button_cart {
   margin: 6px 0 0 6px;
   padding: 14px 40px;
@@ -2992,12 +2990,12 @@ summary::-webkit-details-marker {
 }
 
 @media (max-width: 1024px) {
-  .products__button {
+  .products__button_index {
     margin-top: 32px;
   }
 }
 @media (max-width: 767px) {
-  .products__button {
+  .products__button_index {
     margin-top: 42px;
   }
 }
@@ -3008,7 +3006,6 @@ summary::-webkit-details-marker {
   align-items: center;
   flex-wrap: wrap;
   gap: 40px 128px;
-  margin-bottom: 72px;
   margin: 92px 0 128px 0;
 }
 
@@ -3236,25 +3233,60 @@ summary::-webkit-details-marker {
   background-color: #F16D7F;
 }
 
+@media (width <= 1024px) and (width >= 768px) {
+  .main-content__cart {
+    display: grid;
+    grid-template-columns: repeat(2, 367px);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px 16px;
+    margin-top: 60px;
+  }
+  .cart__product {
+    grid-column: span 2;
+    justify-content: normal;
+  }
+  .text__title_cart {
+    gap: 204px;
+  }
+  .cart__form {
+    grid-row: 4;
+  }
+  .form__button_cart {
+    font-weight: 400;
+  }
+  .cart__total {
+    align-self: center;
+  }
+  .title__characteristic_cart {
+    font-weight: 400;
+  }
+  .cart__buttons {
+    grid-column: span 2;
+    grid-row: 3;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 22px;
+    margin-bottom: 24px;
+  }
+}
 .footer__subscription {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 400px;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../../images/beach.jpg);
   padding-top: 96px;
   padding-bottom: 128px;
-  padding-right: calc(50% - 800px);
-  padding-left: calc(50% - 800px);
 }
 
 .comment__image {
-  margin-left: 132px;
-  margin-right: 132px;
+  display: flex;
+  margin: auto;
 }
 
 .comment__text {
@@ -3347,10 +3379,9 @@ summary::-webkit-details-marker {
 .footer__information {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 746px;
   background: #222;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -3400,7 +3431,8 @@ summary::-webkit-details-marker {
     margin-bottom: 28px;
   }
   .footer__information {
-    gap: 305px;
+    padding-right: 32px;
+    padding-left: 32px;
   }
 }
 @media (max-width: 767px) {
@@ -3495,10 +3527,9 @@ summary::-webkit-details-marker {
 .header__nav-bar {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 860px;
   padding-top: 20px;
   padding-bottom: 20px;
   background: #222;
@@ -3620,13 +3651,11 @@ summary::-webkit-details-marker {
 
 @media (max-width: 1024px) {
   .header__nav-bar {
-    gap: 424px;
+    padding-right: 32px;
+    padding-left: 32px;
   }
   .nav-bar__buttons {
     gap: 24px;
-  }
-  .button__list {
-    display: none;
   }
 }
 @media (max-width: 767px) {
@@ -3822,7 +3851,7 @@ summary::-webkit-details-marker {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 22px;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 24px;
   color: #000;
 }
@@ -3849,6 +3878,22 @@ summary::-webkit-details-marker {
   gap: 22px;
 }
 
+@media (width <= 1024px) and (width >= 768px) {
+  .form__title_registration {
+    font-weight: 400;
+  }
+  .registration__description {
+    width: 354px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .registration__introduction {
+    width: 354px;
+  }
+  .registration__perk-description {
+    width: 308px;
+  }
+}
 .products__button {
   display: flex;
   flex-direction: row;
@@ -3866,6 +3911,11 @@ summary::-webkit-details-marker {
 }
 
 .products__button_index {
+  margin-top: 48px;
+  padding: 14px 40px;
+}
+
+.products__button_product {
   margin-top: 48px;
   padding: 14px 40px;
 }
@@ -3896,34 +3946,31 @@ summary::-webkit-details-marker {
 }
 
 @media (max-width: 1024px) {
-  .products__button {
+  .products__button_index {
     margin-top: 32px;
   }
 }
 @media (max-width: 767px) {
-  .products__button {
+  .products__button_index {
     margin-top: 42px;
   }
 }
 .footer__subscription {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 400px;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../../images/beach.jpg);
   padding-top: 96px;
   padding-bottom: 128px;
-  padding-right: calc(50% - 800px);
-  padding-left: calc(50% - 800px);
 }
 
 .comment__image {
-  margin-left: 132px;
-  margin-right: 132px;
+  display: flex;
+  margin: auto;
 }
 
 .comment__text {
@@ -4016,10 +4063,9 @@ summary::-webkit-details-marker {
 .footer__information {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 746px;
   background: #222;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -4069,7 +4115,8 @@ summary::-webkit-details-marker {
     margin-bottom: 28px;
   }
   .footer__information {
-    gap: 305px;
+    padding-right: 32px;
+    padding-left: 32px;
   }
 }
 @media (max-width: 767px) {

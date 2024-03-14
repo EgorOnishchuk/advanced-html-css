@@ -1,6 +1,6 @@
 .main-content__features {
     @include flex-layout(row, center, center);
-    gap: 32px;
+    gap: 30px;
     padding-top: 104px;
     padding-bottom: 104px;
     background: $main-dark-color;

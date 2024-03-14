@@ -214,3 +214,11 @@
 .item__checkbox:checked+.item__text_sorting::after {
     opacity: 1;
 }
+
+@media (width <=$tablet-max-width) and (width >=$tablet-min-width) {
+    .main-content__filter-and-sorting {
+        justify-content: center;
+        padding-top: 24px;
+        padding-bottom: 40px;
+    }
+}

@@ -1,7 +1,6 @@
 .main-content__cart {
     @include grid-layout(652px 360px, space-between, center);
     gap: 40px 128px;
-    margin-bottom: 72px;
     margin: 92px 0 128px 0;
 }
 
@@ -189,4 +188,46 @@
 .buttons__button_cart:hover {
     color: $main-white-color;
     background-color: $highlighting-color;
+}
+
+@media (width <=$tablet-max-width) and (width >=$tablet-min-width) {
+    .main-content__cart {
+        @include grid-layout(repeat(2, 367px), center, center);
+        gap: 40px 16px;
+        margin-top: 60px;
+    }
+
+    .cart__product {
+        grid-column: span 2;
+        justify-content: normal;
+    }
+
+    .text__title_cart {
+        gap: 204px;
+    }
+
+    .cart__form {
+        grid-row: 4;
+    }
+
+    .form__button_cart {
+        font-weight: 400;
+    }
+
+    .cart__total {
+        align-self: center;
+    }
+
+    .title__characteristic_cart {
+        font-weight: 400;
+    }
+
+    .cart__buttons {
+        grid-column: span 2;
+        grid-row: 3;
+        justify-content: center;
+        gap: 48px;
+        margin-top: 22px;
+        margin-bottom: 24px;
+    }
 }

@@ -1,16 +1,14 @@
 .footer__subscription {
-    @include flex-layout(row, center, center);
-    gap: 400px;
+    @include flex-layout(row, space-between, center);
     @include background-image-layout(cover);
     background-image: url(../../images/beach.jpg);
     padding-top: 96px;
     padding-bottom: 128px;
-    @include content-area-centering($desktop-extended-width, $desktop-indentations);
 }
 
 .comment__image {
-    margin-left: 132px;
-    margin-right: 132px;
+    display: flex;
+    margin: auto;
 }
 
 .comment__text {
@@ -86,8 +84,7 @@
 }
 
 .footer__information {
-    @include flex-layout(row, center, center);
-    gap: 746px;
+    @include flex-layout(row, space-between, center);
     background: $main-dark-color;
     padding-top: 24px;
     padding-bottom: 24px;
@@ -131,7 +128,8 @@
     }
 
     .footer__information {
-        gap: 305px;
+        padding-right: 32px;
+        padding-left: 32px;
     }
 }
 

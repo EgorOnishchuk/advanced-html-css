@@ -30,7 +30,7 @@
 }
 
 .description__text {
-    max-width: 552px;
+    max-width: 555px;
     margin-top: 48px;
     margin-bottom: 32px;
     font-weight: 300;
@@ -83,4 +83,17 @@
 .title__icon_selection path {
     padding-top: 7px;
     padding-bottom: 5px;
+}
+
+@media (width <=$tablet-max-width) and (width >=$tablet-min-width) {
+    .main-content__description {
+        margin-top: 0;
+    }
+
+    .description__subtitle,
+    .description__title,
+    .description__text,
+    .description__price {
+        font-weight: 400;
+    }
 }

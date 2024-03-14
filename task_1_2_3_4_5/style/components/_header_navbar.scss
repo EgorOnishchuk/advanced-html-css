@@ -1,6 +1,5 @@
 .header__nav-bar {
-    @include flex-layout(row, center, center);
-    gap: 860px;
+    @include flex-layout(row, space-between, center);
     padding-top: 20px;
     padding-bottom: 20px;
     background: $main-dark-color;
@@ -106,15 +105,12 @@
 
 @media (max-width: $tablet-max-width) {
     .header__nav-bar {
-        gap: 424px;
+        padding-right: 32px;
+        padding-left: 32px;
     }
 
     .nav-bar__buttons {
         gap: 24px;
-    }
-
-    .button__list {
-        display: none;
     }
 }
 
