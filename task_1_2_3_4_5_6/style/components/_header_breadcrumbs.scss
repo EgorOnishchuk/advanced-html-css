@@ -24,6 +24,11 @@
     content: '/';
 }
 
+.list__item:last-child .item__link {
+    font-weight: 700;
+    color: $highlighting-color;
+}
+
 .item__link {
     font-weight: 300;
     font-size: 14px;
@@ -35,7 +40,14 @@
     color: $highlighting-color;
 }
 
-.item__link_selected {
-    font-weight: 700;
-    color: $highlighting-color;
+@media (width <=$phone-max-width) {
+    .header__breadcrumbs {
+        @include flex-layout(column, center, center);
+        gap: 32px;
+        padding: 24px 0 46px;
+    }
+
+    .header__breadcrumbs_minimized {
+        padding: 60px 0;
+    }
 }

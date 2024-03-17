@@ -1,7 +1,7 @@
 .main-content__description {
     position: relative;
     @include flex-layout(column, center, center);
-    max-width: $desktop-width;
+    max-width: $desktop-content-width;
     margin: -64px auto 0;
     padding-top: 64px;
     padding-bottom: 64px;
@@ -31,8 +31,7 @@
 
 .description__text {
     max-width: 555px;
-    margin-top: 48px;
-    margin-bottom: 32px;
+    margin: 48px 0 32px;
     font-weight: 300;
     font-size: 14px;
     text-align: center;
@@ -85,7 +84,7 @@
     padding-bottom: 5px;
 }
 
-@media (width <=$tablet-max-width) and (width >=$tablet-min-width) {
+@media (width <=$tablet-max-width) {
     .main-content__description {
         margin-top: 0;
     }
@@ -95,5 +94,29 @@
     .description__text,
     .description__price {
         font-weight: 400;
+    }
+}
+
+@media (width <=$phone-max-width) {
+    .description__text {
+        margin: 32px 0;
+        max-width: 326px;
+        line-height: 144%;
+    }
+
+    .description__price {
+        margin-bottom: 32px;
+    }
+
+    .description__thin-slider {
+        width: 178px;
+    }
+
+    .description__selections {
+        margin-top: 48px;
+    }
+
+    .title__text_selection {
+        font-size: 10px;
     }
 }

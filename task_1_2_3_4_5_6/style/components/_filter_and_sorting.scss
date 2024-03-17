@@ -50,12 +50,12 @@
     color: $highlighting-color;
 }
 
-.filters__title:hover .title__icon path {
+.filters__title:hover .title__icon_filter path {
     fill: $highlighting-color;
 }
 
 .title__text_filter,
-.title__icon path {
+.title__icon_filter path {
     transition: $fast-transition;
 }
 
@@ -139,19 +139,19 @@
     color: $highlighting-color;
 }
 
-.sorting__title:hover .title__icon path {
+.sorting__title:hover .title__icon_sorting path {
     fill: $highlighting-color;
 }
 
 .title__text_sorting,
-.title__icon path {
+.title__icon_sorting path {
     transition: $fast-transition;
 }
 
 .sorting__list {
     position: absolute;
     top: 20px;
-    left: -9px;
+    left: -20px;
     width: 80px;
     @include flex-layout(column, center, flex-start);
     gap: 24px;
@@ -215,10 +215,45 @@
     opacity: 1;
 }
 
-@media (width <=$tablet-max-width) and (width >=$tablet-min-width) {
+@media (width <=$tablet-max-width) {
     .main-content__filter-and-sorting {
-        justify-content: center;
+        justify-content: space-around;
         padding-top: 24px;
         padding-bottom: 40px;
+    }
+}
+
+@media (width <=$phone-max-width) {
+    .main-content__filter-and-sorting {
+        position: relative;
+        gap: 62px;
+        padding-top: 30px;
+        padding-bottom: 48px;
+    }
+
+    .filter-and-sorting__filters-box {
+        position: absolute;
+    }
+
+    .title__icon_filter {
+        width: 38px;
+        height: 26px;
+    }
+
+    .title__text_filter {
+        display: none;
+    }
+
+    .filters-box__filters[open] {
+        z-index: 2;
+    }
+
+    .filter-and-sorting__sorting-block {
+        gap: 24px;
+        position: absolute;
+        width: 100%;
+        top: 24px;
+        left: 32px;
+        z-index: 1;
     }
 }

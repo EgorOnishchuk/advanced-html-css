@@ -47,7 +47,7 @@
     font-weight: 700;
 }
 
-@media (max-width: $tablet-max-width) {
+@media (width <=$tablet-max-width) {
     .main-content__offers {
         @include grid-layout(repeat(3, 232px), center, center);
         gap: 20px;

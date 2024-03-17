@@ -23,18 +23,25 @@
 }
 
 .carousel__image {
-    padding-top: 12px;
-    padding-bottom: 44px;
+    margin: 12px 0 44px;
 }
 
 .carousel__button_right {
     right: 0;
 }
 
-@media (width <=$tablet-max-width) and (width >=$tablet-min-width) {
+@media (width <=$tablet-max-width) {
     .carousel__image {
         width: 466px;
         height: 564px;
-        padding: 30px 0;
+        margin: 30px 0;
+    }
+}
+
+@media (width <=$phone-max-width) {
+    .carousel__image {
+        width: 374px;
+        height: 454px;
+        margin: 84px 0;
     }
 }

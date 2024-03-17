@@ -6,6 +6,11 @@
     padding: 0;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: Lato, sans-serif;
 }
@@ -49,17 +54,17 @@ summary::-webkit-details-marker {
 }
 
 .center {
-    @include content-area-centering($desktop-width, $desktop-indentations);
+    @include content-area-centering($desktop-content-width, $desktop-indentations);
 }
 
 @media (max-width: $tablet-max-width) {
     .center {
-        @include content-area-centering($tablet-min-width, $tablet-indentations);
+        @include content-area-centering($tablet-content-width, $tablet-indentations);
     }
 }
 
 @media (max-width: $phone-max-width) {
     .center {
-        @include content-area-centering($phone-min-width, $phone-indentations);
+        @include content-area-centering($phone-content-width, $phone-indentations);
     }
 }

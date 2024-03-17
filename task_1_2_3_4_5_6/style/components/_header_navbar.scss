@@ -60,7 +60,7 @@
     position: absolute;
     top: 30px;
     left: -54px;
-    z-index: 1;
+    z-index: 3;
     margin-top: 25px;
     padding: 32px 72px 32px 32px;
     background-color: $main-white-color;
@@ -91,7 +91,7 @@
     color: $highlighting-color;
 }
 
-.subcategory__link {
+.category__link {
     font-weight: 400;
     font-size: 14px;
     color: #6F6E6E;
@@ -99,11 +99,11 @@
     transition: $fast-transition;
 }
 
-.subcategory__link:hover {
+.category__link:hover {
     color: $highlighting-color;
 }
 
-@media (max-width: $tablet-max-width) {
+@media (width <=$tablet-max-width) {
     .header__nav-bar {
         padding-right: 32px;
         padding-left: 32px;
@@ -116,19 +116,7 @@
 
 @media (max-width: $phone-max-width) {
     .header__nav-bar {
-        gap: 200px;
-        flex-wrap: nowrap;
-    }
-
-    .nav-bar__logo-block {
-        flex-wrap: nowrap;
-    }
-
-    .buttons__button_profile {
-        display: none;
-    }
-
-    .buttons__button_list {
-        display: none;
+        padding-right: 32px;
+        padding-left: 16px;
     }
 }

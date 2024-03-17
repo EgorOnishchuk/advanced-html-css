@@ -51,7 +51,7 @@
     border: none;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
-    width: 232px;
+    width: 218px;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 24px;
@@ -114,7 +114,7 @@
     fill: $main-white-color;
 }
 
-@media (max-width: $tablet-max-width) {
+@media (width <=$tablet-max-width) {
     .footer__subscription {
         @include flex-layout(column, center, center);
         gap: 48px;
@@ -127,17 +127,29 @@
         margin-bottom: 28px;
     }
 
+    .title__main-part {
+        line-height: 162%;
+    }
+
     .footer__information {
         padding-right: 32px;
         padding-left: 32px;
     }
 }
 
-@media (max-width: $phone-max-width) {
+@media (width <=$phone-max-width) {
     .footer__subscription {
         padding-bottom: 112px;
         gap: 60px;
         background-image: url(../../images/phone_beach.jpg);
+    }
+
+    .title__main-part {
+        line-height: 152%;
+    }
+
+    .title__secondary-part {
+        font-size: 14px
     }
 
     .footer__information {

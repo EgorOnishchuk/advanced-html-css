@@ -1,6 +1,6 @@
 .header__banner {
     display: flex;
-    @include content-area-centering($desktop-extended-width, $desktop-indentations);
+    @include content-area-centering($desktop-extended-content-width, $desktop-indentations);
     gap: 64px;
     background: #F1E4E6;
 }
@@ -45,10 +45,10 @@
     font-weight: 700;
 }
 
-@media (max-width: $tablet-max-width) {
+@media (width <=$tablet-max-width) {
     .header__banner {
         gap: 40px;
-        @include content-area-centering($tablet-min-width, $tablet-indentations);
+        @include content-area-centering($tablet-content-width, $tablet-indentations);
     }
 
     .banner__image {
@@ -75,9 +75,9 @@
     }
 }
 
-@media (max-width: $phone-max-width) {
+@media (width <=$phone-max-width) {
     .header__banner {
-        @include content-area-centering($tablet-min-width, $tablet-indentations);
+        @include content-area-centering($phone-content-width, $tablet-indentations);
         @include flex-layout(row, center, center);
     }
 

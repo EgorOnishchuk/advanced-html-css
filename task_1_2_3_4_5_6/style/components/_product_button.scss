@@ -45,7 +45,7 @@
     fill: $main-white-color;
 }
 
-@media (max-width: $tablet-max-width) {
+@media (width <=$tablet-max-width) {
     .products__button_index {
         margin-top: 32px;
     }
@@ -54,5 +54,9 @@
 @media (max-width: $phone-max-width) {
     .products__button_index {
         margin-top: 42px;
+    }
+
+    .products__button_product {
+        margin-top: 64px;
     }
 }

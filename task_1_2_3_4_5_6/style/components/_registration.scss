@@ -26,7 +26,7 @@
 }
 
 .form__input {
-    width: 360px;
+    width: 346px;
     padding: 14px 0 16px 14px;
     border: 1px #A4A4A4 solid;
     font-weight: 400;
@@ -119,13 +119,17 @@
     gap: 22px;
 }
 
-@media (width <=$tablet-max-width) and (width >=$tablet-min-width) {
+@media (width <=$tablet-max-width) {
+    .registration {
+        padding-top: 40px;
+    }
+
     .form__title_registration {
         font-weight: 400;
     }
 
     .registration__description {
-        width: 354px;
+        // width: 354px;
         font-weight: 400;
         font-size: 16px;
     }
@@ -136,5 +140,12 @@
 
     .registration__perk-description {
         width: 308px;
+    }
+}
+
+@media (width <=$phone-max-width) {
+    .registration {
+        justify-content: center;
+        gap: 40px;
     }
 }

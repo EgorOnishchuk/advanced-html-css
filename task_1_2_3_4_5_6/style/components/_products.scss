@@ -34,10 +34,10 @@
 .products__cards {
     @include grid-layout(repeat(auto-fit, minmax(360px, 1fr)), center, center);
     gap: 30px;
-    max-width: $desktop-width;
+    max-width: $desktop-content-width;
 }
 
-@media (max-width: $tablet-max-width) {
+@media (width <=$tablet-max-width) {
     .main-content__products_index {
         margin-top: 108px;
         margin-bottom: 64px;
@@ -49,7 +49,7 @@
 
     .products__cards {
         gap: 16px;
-        max-width: $tablet-max-width;
+        max-width: $tablet-content-width;
     }
 
     .products__description {
@@ -57,9 +57,22 @@
     }
 }
 
-@media (max-width: $phone-max-width) {
+@media (width <=$phone-max-width) {
+    .main-content__products {
+        padding-right: 8px !important;
+        padding-left: 8px !important;
+    }
+
     .main-content__products_index {
         margin-top: 64px;
         margin-bottom: 96px;
+    }
+
+    .main-content__products_product {
+        margin: 64px 0;
+    }
+
+    .products__cards {
+        max-width: $phone-content-width;
     }
 }

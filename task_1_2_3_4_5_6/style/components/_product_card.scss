@@ -67,7 +67,7 @@
     font-weight: 400;
 }
 
-@media (max-width: $tablet-max-width) {
+@media (width <=$tablet-max-width) {
     .product__text {
         padding-bottom: 20px;
     }

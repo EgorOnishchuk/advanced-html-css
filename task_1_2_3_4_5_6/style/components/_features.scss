@@ -36,7 +36,7 @@
     margin-top: 16px;
 }
 
-@media (max-width: $tablet-max-width) {
+@media (width <=$tablet-max-width) {
     .main-content__features {
         @include flex-layout(column, center, center);
         gap: 48px;
